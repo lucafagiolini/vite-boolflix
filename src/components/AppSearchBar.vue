@@ -22,6 +22,15 @@ export default {
                 .catch(error => {
                     console.log(error);
                 });
+
+            axios.get(`https://api.themoviedb.org/3/search/tv?api_key=c7bfad605bd2ec8fb7088c733fe64d61&query=${formattedQuery}`)
+                .then(response => {
+                    this.store.tvseries = response.data.results;
+                    console.log(this.store.tvseries);
+                })
+                .catch(error => {
+                    console.log(error);
+                });    
         }
     }
 }
