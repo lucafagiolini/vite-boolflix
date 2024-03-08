@@ -1,12 +1,21 @@
 <script>
+import AppSearchBar from './components/AppSearchBar.vue';
+
+export default {
+  name: 'App',
+  components: {
+    AppSearchBar
+  }
+}
 
 </script>
 
 <template>
-  hello
 
+  <AppSearchBar></AppSearchBar>
   
 </template>
+
 
 <style>
 
