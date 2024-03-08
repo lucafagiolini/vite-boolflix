@@ -1,9 +1,11 @@
 <script>
 import AppSearchBar from './components/AppSearchBar.vue';
+import AppSlider from './components/AppSlider.vue';
 
 export default {
   name: 'App',
   components: {
+    AppSlider,
     AppSearchBar
   }
 }
@@ -11,9 +13,8 @@ export default {
 </script>
 
 <template>
-
   <AppSearchBar></AppSearchBar>
-  
+  <AppSlider></AppSlider>
 </template>
 
 
