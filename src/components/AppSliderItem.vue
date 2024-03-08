@@ -15,13 +15,13 @@ export default {
 <template>
 
     <li>
-        <h3>{{ movie.title }}</h3>
+        <h5>{{ movie.title }}</h5>
    
-        <h3></h3>
+        <h5> {{ movie.original_title }}</h5>
     
-        <span></span>
+        <span> {{ movie.original_language }}</span>
     
-        <span></span>
+        <span> {{ movie.vote_average }} </span>
     </li>
 
 
