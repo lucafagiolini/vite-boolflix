@@ -33,8 +33,10 @@ export default {
 </script>
 
 <template>
-  <AppSearchBar></AppSearchBar>
-  <AppSlider></AppSlider>
+  <div class="container">
+    <AppSearchBar></AppSearchBar>
+    <AppSlider></AppSlider>
+  </div>
 </template>
 
 

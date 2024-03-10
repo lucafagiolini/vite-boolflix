@@ -45,7 +45,7 @@ export default {
 
 
 <template>
-    <div class="container">
+    <div>
         <input type="text" v-model="this.searchQuery"  placeholder="Search for a movie" />
         <button @click="searchMovies">Search</button>
     </div>
