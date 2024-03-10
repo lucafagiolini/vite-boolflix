@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
-  <div class="container">
+  <div class="">
     <AppSearchBar></AppSearchBar>
     <AppSlider></AppSlider>
   </div>

@@ -24,7 +24,7 @@ export default {
 
 <template>
     <div>
-        <ul class="d-flex flex-wrap gap-3 p-0">
+        <ul class=" container d-flex flex-wrap gap-5 my-5 p-0">
             <AppSliderItem
             v-for="currentMovie in store.movies"
             :movie="currentMovie"

@@ -18,9 +18,9 @@ export default {
 
 <template>
 
-    <li class="card position-relative">
-        <img class="w-100" tabindex="0" :src="movie && movie.poster_path ? 'https://image.tmdb.org/t/p/w342' + movie.poster_path : 'https://www.innerintegratori.it/wp-content/uploads/2021/06/placeholder-image.png'" alt="">
-        <div id="movie_details" class="position-absolute h-100 w-100">
+    <li class="card position-relative rounded-3">
+        <img class="w-100 rounded-3" tabindex="0" :src="movie && movie.poster_path ? 'https://image.tmdb.org/t/p/w342' + movie.poster_path : 'https://www.innerintegratori.it/wp-content/uploads/2021/06/placeholder-image.png'" alt="">
+        <div id="movie_details" class="position-absolute h-100 w-100 justify-content-end p-2 rounded-3">
             <h5>Title: {{ movie.title }}</h5>
        
             <h5>Original title: {{ movie.original_title }}</h5>
@@ -40,14 +40,18 @@ export default {
 
 <style lang="scss">
 .card {
-    width: 300px;
+    width: 250px;
     object-fit: cover;
     cursor: pointer;
+    border: none;
     
 
     &:hover {
         transform: scale(1.1);
         transition: transform 0.3s;
+
+        box-shadow: #e50913 0px 0px 15px; 
+        
     }
    
     
@@ -64,15 +68,12 @@ export default {
 
     &:hover {
 
-        .card {
-            transform: scale(2);
-            transition: transform 0.5s;
-        }
-
         #movie_details {
             display: flex;
             flex-direction: column;
-            background-color: rgba(0, 0, 0, 0.887);
+            background-color: #222528e7;
+            
+            box-shadow: #e50913 0px 0px 15px; 
         }
     }
 
