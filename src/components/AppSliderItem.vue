@@ -21,15 +21,15 @@ export default {
     <li class="card position-relative">
         <img class="w-100" tabindex="0" :src="movie && movie.poster_path ? 'https://image.tmdb.org/t/p/w342' + movie.poster_path : 'https://www.innerintegratori.it/wp-content/uploads/2021/06/placeholder-image.png'" alt="">
         <div id="movie_details" class="position-absolute h-100 w-100">
-            <h5>{{ movie.title }}</h5>
+            <h5>Title: {{ movie.title }}</h5>
        
-            <h5> {{ movie.original_title }}</h5>
+            <h5>Original title: {{ movie.original_title }}</h5>
     
             <img class="flag" :src="'/src/assets/flags/' + movie.original_language + '.png'" alt="">  
     
-            <span> {{ movie.original_language }}</span> 
+            <span>Original language: {{ movie.original_language }}</span> 
         
-            <span> {{ movie.vote_average }} </span>
+            <span>Vote: {{ movie.vote_average }} </span>
         </div>
     </li>
 
@@ -42,11 +42,15 @@ export default {
 .card {
     width: 300px;
     object-fit: cover;
+    cursor: pointer;
+    
 
-    img {
-        max-height: 400px;
-       
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s;
     }
+   
+    
 
     .flag {
         width: 20px;
@@ -61,9 +65,8 @@ export default {
     &:hover {
 
         .card {
-            transform: scale(1.1);
+            transform: scale(2);
             transition: transform 0.5s;
-            
         }
 
         #movie_details {
