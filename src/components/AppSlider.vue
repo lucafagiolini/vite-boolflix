@@ -24,7 +24,9 @@ export default {
 
 <template>
     <div>
-        <ul class=" container d-flex flex-wrap gap-5 my-5 p-0">
+        <h3 class="container">Movies</h3>
+        <ul class=" movie_slider container d-flex justify-content-center align-items-center gap-5 p-0 py-5">
+            <h3>Movies and tv </h3>
             <AppSliderItem
             v-for="currentMovie in store.movies"
             :movie="currentMovie"
@@ -32,6 +34,19 @@ export default {
                 
             </AppSliderItem>
         </ul>
+
+        <h3 class="container">Tv Series</h3>
+        <ul class=" movie_slider container d-flex justify-content-center align-items-center gap-5 p-0 py-5">
+            <h3>Movies and tv </h3>
+            <AppSliderItem
+            v-for="currentMovie in store.tvseries"
+            :movie="currentMovie"
+            >
+                
+            </AppSliderItem>
+        </ul>
+
+
     </div>
 
 
@@ -41,6 +56,21 @@ export default {
 
 
 
-<style>
+<style lang="scss">
+
+.movie_slider {
+    list-style: none;
+   
+    width: 100%;
+    
+    
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 5px;
+    li {
+        flex: 0 0 auto;
+        width: 200px;
+    }
+}
 
 </style>

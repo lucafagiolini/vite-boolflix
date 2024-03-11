@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
-  <div class="">
+  <div class="mx-3">
     <AppSearchBar></AppSearchBar>
     <AppSlider></AppSlider>
   </div>
