@@ -22,7 +22,7 @@ export default {
           this.store.movies = res.data.results;
       });
 
-    axios.get('https://api.themoviedb.org/3/movie/top_rated?api_key=c7bfad605bd2ec8fb7088c733fe64d61')
+    axios.get('https://api.themoviedb.org/3/tv/top_rated?api_key=c7bfad605bd2ec8fb7088c733fe64d61')
       .then(res => {
           this.store.tvseries = res.data.results;
       });}
